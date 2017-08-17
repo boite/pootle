@@ -1,7 +1,7 @@
 FROM webdevops/bootstrap:ubuntu-16.04
 MAINTAINER Hans Hoechtl "hhoechtl@1drop.de"
 
-ENV POOTLE_VERSION="2.7.6"
+ENV POOTLE_VERSION="2.8.0rc7"
 
 RUN chmod -R 2777 /tmp
 
@@ -29,7 +29,7 @@ RUN /usr/local/bin/apt-install build-essential \
   python-setuptools
 # Install python packages
 RUN pip install -q virtualenv \
-    MySQL-python \
+    mysqlclient \
     flup \
     python-memcached \
     python-Levenshtein \
